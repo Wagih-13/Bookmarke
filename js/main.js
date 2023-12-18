@@ -60,3 +60,9 @@ document.querySelector(".btnSubmit").onclick = function () {
   clearInput();
   displaySite();
 };
+
+document.querySelector(".btnSubmit").addEventListener("touchend", handleEnd) = function () {
+  addSite();
+  clearInput();
+  displaySite();
+};
