@@ -54,10 +54,10 @@ function Delete(index) {
 }
 
 displaySite();
-
-document.querySelector("button").addEventListener("click", function () {
-  alert("hiiiiii");
+function firee() {
   addSite();
   clearInput();
   displaySite();
-});
+}
+
+document.querySelector("button").addEventListener("click", firee);
