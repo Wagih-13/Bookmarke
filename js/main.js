@@ -55,7 +55,7 @@ function Delete(index) {
 
 displaySite();
 
-document.querySelector(".btnSubmit").addEventListener("click", function () {
+document.querySelector("button").addEventListener("click", function () {
   addSite();
   clearInput();
   displaySite();
