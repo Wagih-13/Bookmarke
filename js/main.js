@@ -55,14 +55,8 @@ function Delete(index) {
 
 displaySite();
 
-document.querySelector(".btnSubmit").onclick = function () {
+document.querySelector(".btnSubmit").addEventListener("click", function () {
   addSite();
   clearInput();
   displaySite();
-};
-
-document.querySelector(".btnSubmit").ontouchend = function () {
-  addSite();
-  clearInput();
-  displaySite();
-};
+});
