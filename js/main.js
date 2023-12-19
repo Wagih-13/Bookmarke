@@ -30,12 +30,6 @@ function addSite() {
     localStorage.setItem("BookmarksSave", JSON.stringify(Bookmarks));
   }
 }
-document.querySelector("button").addEventListener("click", function () {
-  addSite();
-  clearInput();
-  displaySite();
-});
-
 function displaySite() {
   var blockOfTags = "";
   for (let i = 0; i < Bookmarks.length; i++) {
@@ -60,3 +54,9 @@ function Delete(index) {
 }
 
 displaySite();
+
+document.querySelector("button").addEventListener("click", function () {
+  addSite();
+  clearInput();
+  displaySite();
+});
