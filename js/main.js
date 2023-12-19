@@ -1,6 +1,6 @@
-let siteNameinp = document.querySelector("#bookName");
-let seteUrlinp = document.querySelector("#websiteUrl");
-let Bookmarks = [];
+var siteNameinp = document.querySelector("#bookName");
+var seteUrlinp = document.querySelector("#websiteUrl");
+var Bookmarks = [];
 
 if (localStorage.getItem("BookmarksSave")) {
   Bookmarks = JSON.parse(localStorage.getItem("BookmarksSave"));
@@ -21,8 +21,8 @@ function inpValidate() {
   }
 }
 function addSite() {
-  if (inpValidate() && namevalidate()) {
-    let tableContent = {
+  if (inpValidate() === true && namevalidate() === true) {
+    var tableContent = {
       siteName: siteNameinp.value,
       siteUrl: seteUrlinp.value,
     };
@@ -31,7 +31,7 @@ function addSite() {
   }
 }
 function displaySite() {
-  let blockOfTags = "";
+  var blockOfTags = "";
   for (let i = 0; i < Bookmarks.length; i++) {
     blockOfTags += `<tr>
           <td>${i}</td>
